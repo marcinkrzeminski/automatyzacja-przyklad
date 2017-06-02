@@ -1,0 +1,21 @@
+{
+  "generator-chisel": {
+    "config": {
+      "name": "Automatyzacja",
+      "author": "Xfive",
+      "projectType": "wp-with-fe",
+      "nameSlug": "automatyzacja",
+      "nameCamel": "Automatyzacja",
+      "features": {
+        "has_jquery": true,
+        "has_babel": true
+      }
+    },
+    "pages": [
+      "O nas",
+      "Oferta",
+      "Kontakt",
+      "Galeria"
+    ]
+  }
+}

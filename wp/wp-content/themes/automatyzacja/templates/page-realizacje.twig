@@ -1,0 +1,30 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <article id="post-{{ post.ID }}">
+    <section>
+      <h1>{{ post.title }}</h1>
+      {{ post.content }}
+      <ul class="o-list-bare">
+      {% for item in post.get_field('x5_portfolio') %}
+        <li class="o-media">
+          <div class="o-media__img js-modal-parent">
+            <a class="js-modal-trigger" href="#{{ loop.index }}">
+              <img src="{{ TimberImage(item.x5_portfolio_photo).src|resize(100, 75) }}" alt="">
+            </a>
+            <div class="c-modal js-modal-window u-hidden">
+              <img src="{{ TimberImage(item.x5_portfolio_photo).src|resize(800, 600) }}" alt="">
+              <a class="c-modal__close js-modal-close" href="#" aria-label="Zamknij">
+                &times;
+              </a>
+            </div>
+          </div>
+          <div class="o-media__body">
+            {{ item.x5_portfolio_desc }}
+          </div>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+  </article>
+{% endblock %}

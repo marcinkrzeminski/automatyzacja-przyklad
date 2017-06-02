@@ -1,0 +1,10 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <article id="post-{{zpost.ID}}">
+    <section>
+      <h1>{{post.title}}</h1>
+      {{post.content}}
+    </section>
+  </article>
+{% endblock %}
